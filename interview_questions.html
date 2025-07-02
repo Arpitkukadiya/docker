@@ -135,6 +135,112 @@
     <p><strong>Answer:</strong> <code>docker ps</code>, <code>docker run</code>, <code>docker exec</code>, <code>docker logs</code>, <code>docker-compose up/down</code>, <code>docker build</code>, <code>docker images</code>, and <code>docker network ls</code>.</p>
   </div>
 
+  <!-- Keep the same <head> and <style> as in your original -->
+<!-- Add the following new questions inside <body>, after the existing .question-box blocks -->
+
+<div class="question-box">
+  <h5>1️⃣6️⃣ What is Docker and why is it used?</h5>
+  <p><strong>Answer:</strong> Docker is a containerization platform used to package applications and their dependencies together in isolated containers. It ensures consistent environments from development to production and improves deployment speed and scalability.</p>
+</div>
+
+<div class="question-box">
+  <h5>1️⃣7️⃣ What is the difference between Docker and a Virtual Machine?</h5>
+  <p><strong>Answer:</strong> Docker containers share the host OS kernel and are lightweight, starting instantly. VMs emulate entire OS environments including hardware, making them heavier and slower to boot.</p>
+</div>
+
+<div class="question-box">
+  <h5>1️⃣8️⃣ Explain Docker architecture.</h5>
+  <p><strong>Answer:</strong> Docker architecture includes the Docker Client (CLI), Docker Daemon (Server), Docker Images, Docker Containers, and Docker Registries (like DockerHub). The client communicates with the daemon to build, run, and manage containers.</p>
+</div>
+
+<div class="question-box">
+  <h5>1️⃣9️⃣ What is the role of Docker Daemon?</h5>
+  <p><strong>Answer:</strong> The Docker Daemon (`dockerd`) listens for Docker API requests and manages Docker objects such as images, containers, networks, and volumes.</p>
+</div>
+
+<div class="question-box">
+  <h5>2️⃣0️⃣ What’s the difference between image and container?</h5>
+  <p><strong>Answer:</strong> An image is a static blueprint or template. A container is a live, running instance of that image with a writable layer.</p>
+</div>
+
+<div class="question-box">
+  <h5>2️⃣1️⃣ How to create and run a container?</h5>
+  <p><strong>Answer:</strong> Use <code>docker run image_name</code> to create and run a container. For example: <code>docker run -d -p 80:80 nginx</code></p>
+</div>
+
+<div class="question-box">
+  <h5>2️⃣2️⃣ What is a Dockerfile?</h5>
+  <p><strong>Answer:</strong> A Dockerfile is a text file with a set of instructions to build a Docker image, such as <code>FROM</code>, <code>COPY</code>, <code>RUN</code>, and <code>CMD</code>.</p>
+</div>
+
+<div class="question-box">
+  <h5>2️⃣3️⃣ What are common instructions in a Dockerfile?</h5>
+  <p><strong>Answer:</strong> Common instructions include <code>FROM</code> (base image), <code>COPY</code>, <code>ADD</code>, <code>RUN</code>, <code>CMD</code>, <code>ENTRYPOINT</code>, <code>EXPOSE</code>, and <code>WORKDIR</code>.</p>
+</div>
+
+<div class="question-box">
+  <h5>2️⃣4️⃣ What are volumes in Docker?</h5>
+  <p><strong>Answer:</strong> Volumes are storage mechanisms used to persist data generated and used by containers. They are managed by Docker and remain even after a container is deleted.</p>
+</div>
+
+<div class="question-box">
+  <h5>2️⃣5️⃣ Difference between bind mount and named volume?</h5>
+  <p><strong>Answer:</strong> Bind mounts map a specific host path to a container path. Named volumes are managed by Docker and stored in Docker’s internal volume directory. Named volumes are preferred for portability and ease of use.</p>
+</div>
+
+<div class="question-box">
+  <h5>2️⃣6️⃣ What is the use of Docker networks?</h5>
+  <p><strong>Answer:</strong> Docker networks enable communication between containers. Containers in the same network can connect using container names. Custom networks provide isolation and DNS-based discovery.</p>
+</div>
+
+<div class="question-box">
+  <h5>2️⃣7️⃣ How to connect multiple containers?</h5>
+  <p><strong>Answer:</strong> Create a custom bridge network with <code>docker network create</code> and run containers with <code>--network</code> flag. This allows them to communicate by name.</p>
+</div>
+
+<div class="question-box">
+  <h5>2️⃣8️⃣ What is Docker Compose?</h5>
+  <p><strong>Answer:</strong> Docker Compose is a tool to define and run multi-container applications using a <code>docker-compose.yml</code> file, making orchestration easy.</p>
+</div>
+
+<div class="question-box">
+  <h5>2️⃣9️⃣ How does docker-compose differ from docker run?</h5>
+  <p><strong>Answer:</strong> <code>docker run</code> is for single containers. <code>docker-compose</code> allows managing multiple services as a group using a YAML file, making multi-container setups easier.</p>
+</div>
+
+<div class="question-box">
+  <h5>3️⃣0️⃣ How do you publish Docker images?</h5>
+  <p><strong>Answer:</strong> Tag the image and push to a registry:<br>
+  <code>docker tag myapp username/myapp</code><br>
+  <code>docker push username/myapp</code></p>
+</div>
+
+<div class="question-box">
+  <h5>3️⃣1️⃣ What is a Docker Registry?</h5>
+  <p><strong>Answer:</strong> A Docker registry is a storage and distribution system for Docker images. Popular registries include DockerHub, GitHub Container Registry, and private registries.</p>
+</div>
+
+<div class="question-box">
+  <h5>3️⃣2️⃣ How does Docker fit into DevOps?</h5>
+  <p><strong>Answer:</strong> Docker simplifies application packaging and deployment, making CI/CD pipelines more consistent. It allows reproducible builds, isolated environments, and faster rollouts.</p>
+</div>
+
+<div class="question-box">
+  <h5>3️⃣3️⃣ Have you used Docker with CI/CD pipelines?</h5>
+  <p><strong>Answer:</strong> Yes, Docker is integrated into CI/CD tools like Jenkins, GitHub Actions, and GitLab CI to build, test, and deploy containerized apps in automated pipelines.</p>
+</div>
+
+<div class="question-box">
+  <h5>3️⃣4️⃣ What is Docker Swarm?</h5>
+  <p><strong>Answer:</strong> Docker Swarm is Docker’s native clustering and orchestration tool that manages multiple containers across hosts as a single cluster with built-in load balancing and failover.</p>
+</div>
+
+<div class="question-box">
+  <h5>3️⃣5️⃣ What is the difference between Docker Swarm and Kubernetes?</h5>
+  <p><strong>Answer:</strong> Docker Swarm is simpler and tightly integrated with Docker, while Kubernetes is more powerful and widely adopted for production-grade container orchestration, offering better scaling, monitoring, and ecosystem.</p>
+</div>
+
+
   <div class="text-center mt-5">
     <a href="index.html" class="btn btn-primary">⬅️ Back to Dashboard</a>
   </div>
